@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { ReactComponent as Wave } from "./wave.svg";
 import "./Timers.scss";
 
 const Timer = ({ time }) => {

@@ -1,0 +1,27 @@
+.title {
+    margin-top: 4rem;
+    text-align: center;
+    font-weight: 900;
+
+    &--small {
+        font-size: 1.8rem;
+    }
+
+    &--big {
+        font-size: 3.6rem;
+    }
+}
+
+.logo {
+    overflow: hidden;
+    position: relative;
+    height: 418px;
+
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

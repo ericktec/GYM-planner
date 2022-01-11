@@ -1,0 +1,42 @@
+@use "./assets/styles/utilities.scss";
+
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 23rem;
+    color: inherit;
+    font-size: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__container &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active,
+    &:focus {
+        transform: scale(0.95);
+    }
+
+    &--primary {
+        background-color: var(--orange-primary);
+        border: none;
+    }
+
+    &--secondary {
+        background-color: transparent;
+        border: 1px solid var(--orange-primary);
+    }
+}

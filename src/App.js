@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.scss';
-import Timer from './components/Timer/Timer';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home/Home';
 
 function App() {
   return (
     <div>
-      <Timer time={10} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+      </Routes>
     </div>
   );
 }
