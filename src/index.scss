@@ -1,0 +1,33 @@
+:root {
+    --primary-blue: #1B1A22;
+    --secondary-blue: #2E2C3A;
+    --orange-primary: #FE6851;
+    --primary-gray: #E5E5E5;
+}
+
+
+@font-face {
+    font-family: OpenSans;
+    src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: OpenSans, Arial;
+    color: var(--primary-gray);
+    line-height: 1.6;
+    background-color: var(--primary-blue);
+}

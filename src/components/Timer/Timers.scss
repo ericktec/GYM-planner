@@ -1,0 +1,48 @@
+.timer {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+
+
+    &__wave {
+        position: absolute;
+        background-image: url(./wave.svg);
+        background-repeat: repeat-x;
+        background-size: auto;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 6400px;
+        transition: top .5s ease;
+        animation: wave linear 3s infinite;
+    }
+
+    &__wave::after {
+        display: block;
+        position: absolute;
+        content: '';
+        background: var(--orange-primary);
+        height: calc(100% - 192px);
+        bottom: 0;
+        width: 100%;
+    }
+
+    &__seconds {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14rem;
+    }
+}
+
+@keyframes wave {
+    0% {
+        margin-left: translate(0);
+    }
+
+    100% {
+        transform: translate(-1600px);
+    }
+}

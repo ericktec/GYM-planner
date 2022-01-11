@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198">
+  <defs>
+    <linearGradient id="a" x1="50%" x2="50%" y1="-10.959%" y2="100%">
+      <stop stop-color="#57BBC1" stop-opacity=".25" offset="0%"/>
+      <stop stop-color="#015871" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#a)" fill-rule="evenodd" d="M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z" transform="matrix(-1 0 0 1 1600 0)"/>
+</svg>
+
+
+
+<svg  viewBox="0 0 100 25" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+      <pattern id="Wave"
+            x="0" y="0" width="100" height="25"
+            patternUnits="userSpaceOnUse" >
+            <path d="M0 25 0 6C20 9 38 11 55 7 72 4 87 4 100 6l0 19z" id="path4" fill="#FE6851"/>
+      </pattern>
+   </defs>
+  <rect width="100%" height="100%" fill="url(#Wave)" />
+</svg> 
