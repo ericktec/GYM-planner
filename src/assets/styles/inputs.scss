@@ -1,0 +1,26 @@
+input[type=text],
+select {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--primary-gray);
+    padding-bottom: 1.8rem;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+select {
+    cursor: pointer;
+
+    & option {
+        background-color: var(--primary-blue);
+    }
+}
+
+.input__label {
+    margin-bottom: 2rem;
+    display: block;
+}
