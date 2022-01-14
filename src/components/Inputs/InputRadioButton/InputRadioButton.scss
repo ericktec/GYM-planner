@@ -1,0 +1,38 @@
+.input--radio {
+
+    &__container {
+        display: flex;
+        align-items: center;
+        display: inline-block;
+    }
+
+
+    &__btn {
+        position: relative;
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+        background-color: var(--primary-gray);
+        cursor: pointer;
+        ;
+
+        &::before {
+            position: absolute;
+            border-radius: 50%;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 1rem;
+            width: 1rem;
+            background-color: var(--primary-blue);
+            opacity: 0;
+        }
+    }
+
+    &:checked+&__btn::before {
+        opacity: 1;
+    }
+}

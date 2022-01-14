@@ -1,16 +1,30 @@
+import { useState } from 'react';
+import InputNumber from '../../components/Inputs/InputNumber/InputNumber';
 import InputSelect from '../../components/Inputs/InputSelect/InputSelect';
 import InputText from "../../components/Inputs/InputText/InputText";
+import InputRadioButton from '../../components/Inputs/InputRadioButton/InputRadioButton';
 
 const Inputs = () => {
 
+    const [inputNumber, setInputNumber] = useState("");
+    const [inputText, setInputText] = useState("");
+    const [inputSelect, setInputSelect] = useState("");
+    const [inputRadioButton, setInputRadioButton] = useState("")
+
     return (
-        <div>
-            <InputText id="test" label="Test label" placeholder="Test placeholder" />
-            <InputSelect id={"test1"} label={"select test"} placeholder={"Select test placeholder"}>
+        <div style={{ margin: "auto", width: "80%", marginTop: "1rem" }}>
+            <InputText value={inputText} setValue={setInputText} id="test" label="Test label" placeholder="Test placeholder" />
+            <InputSelect value={inputSelect} setValue={setInputSelect} id={"test1"} label={"select test"} placeholder={"Select test placeholder"}>
+                <option value="" disabled>Select your option</option>
                 <option value="test">Test</option>
                 <option value="test1">Test1</option>
                 <option value="test2">Test2</option>
             </InputSelect>
+            <InputNumber value={inputNumber} setValue={setInputNumber} label="Label" placeholder="Test" min="-5" max="7" />
+
+            <label className='input__label'>Genre</label>
+            <InputRadioButton className="small-margin-right" value="test" label="test" id="test" name="testGroup" selectedOption={inputRadioButton} setSelectedOption={setInputRadioButton} />
+            <InputRadioButton value="test2" label="test2" id="test2" name="testGroup" selectedOption={inputRadioButton} setSelectedOption={setInputRadioButton} />
         </div>
     );
 }

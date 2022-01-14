@@ -1,0 +1,37 @@
+.input--number::-webkit-outer-spin-button,
+.input--number::-webkit-inner-spin-button,
+.input--number {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+
+.input--number {
+
+    &__container {
+        position: relative;
+    }
+
+    &__arrow {
+        display: inline-block;
+        content: "^";
+        position: absolute;
+        top: 0%;
+        right: 0rem;
+        transform: translateY(-50%);
+        cursor: pointer;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+
+        &:hover {
+            color: var(--primary-orange);
+        }
+
+        &--down {
+            top: 15%;
+            transform: rotate(180deg);
+        }
+    }
+}

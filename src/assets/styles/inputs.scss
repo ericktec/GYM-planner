@@ -1,4 +1,5 @@
 input[type=text],
+input[type=number],
 select {
     display: block;
     width: 100%;
@@ -12,15 +13,26 @@ select {
     color: inherit;
 }
 
+
 select {
     cursor: pointer;
 
     & option {
         background-color: var(--primary-blue);
+        font-size: 1.4rem;
+
+        &:hover {
+            background-color: var(--primary-orange);
+        }
     }
 }
 
 .input__label {
     margin-bottom: 2rem;
     display: block;
+}
+
+
+input[type=radio] {
+    display: none;
 }
