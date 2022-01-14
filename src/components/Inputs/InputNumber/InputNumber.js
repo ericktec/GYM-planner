@@ -33,8 +33,8 @@ const InputNumber = ({ id, name, label, placeholder, min, max, setValue, value, 
         <div>
             <label className="input__label" htmlFor={id}>{label}</label>
             <div className="input--number__container">
-                <span onClick={upArrowHandler} className="input--number__arrow input--number__arrow--up">^</span>
-                <span onClick={downArrowHandler} className="input--number__arrow input--number__arrow--down">^</span>
+                <span onClick={upArrowHandler} className="input--number__arrow input--number__arrow--up no-select">^</span>
+                <span onClick={downArrowHandler} className="input--number__arrow input--number__arrow--down no-select">^</span>
                 <input onInput={onInputHandler} step={step} value={value} className="input--number" name={name} id={id} type="number" placeholder={placeholder} min={min} max={max} />
             </div>
         </div>

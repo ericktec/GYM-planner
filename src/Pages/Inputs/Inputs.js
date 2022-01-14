@@ -3,6 +3,7 @@ import InputNumber from '../../components/Inputs/InputNumber/InputNumber';
 import InputSelect from '../../components/Inputs/InputSelect/InputSelect';
 import InputText from "../../components/Inputs/InputText/InputText";
 import InputRadioButton from '../../components/Inputs/InputRadioButton/InputRadioButton';
+import InputSelectMany from '../../components/Inputs/InputSelectMany/InputSelectMany';
 
 const Inputs = () => {
 
@@ -10,6 +11,7 @@ const Inputs = () => {
     const [inputText, setInputText] = useState("");
     const [inputSelect, setInputSelect] = useState("");
     const [inputRadioButton, setInputRadioButton] = useState("")
+    const [inputSelectMany, setInputSelectMany] = useState([]);
 
     return (
         <div style={{ margin: "auto", width: "80%", marginTop: "1rem" }}>
@@ -21,10 +23,12 @@ const Inputs = () => {
                 <option value="test2">Test2</option>
             </InputSelect>
             <InputNumber value={inputNumber} setValue={setInputNumber} label="Label" placeholder="Test" min="-5" max="7" />
-
-            <label className='input__label'>Genre</label>
-            <InputRadioButton className="small-margin-right" value="test" label="test" id="test" name="testGroup" selectedOption={inputRadioButton} setSelectedOption={setInputRadioButton} />
-            <InputRadioButton value="test2" label="test2" id="test2" name="testGroup" selectedOption={inputRadioButton} setSelectedOption={setInputRadioButton} />
+            <div>
+                <label className='input__label'>Genre</label>
+                <InputRadioButton className="small-margin-right" value="test" label="test" id="test" name="testGroup" selectedOption={inputRadioButton} setSelectedOption={setInputRadioButton} />
+                <InputRadioButton value="test2" label="test2" id="test2" name="testGroup" selectedOption={inputRadioButton} setSelectedOption={setInputRadioButton} />
+            </div>
+            <InputSelectMany placeholder="Esto es el placeholder" label="Select many" id="selectmany" options={[{ value: "option1", label: "Option 1" }, { value: "option2", label: "Option 2" }]} optionsSelected={inputSelectMany} setOptionsSelected={setInputSelectMany} />
         </div>
     );
 }

@@ -1,6 +1,7 @@
 input[type=text],
 input[type=number],
-select {
+select,
+.input--select-many {
     display: block;
     width: 100%;
     background-color: transparent;
