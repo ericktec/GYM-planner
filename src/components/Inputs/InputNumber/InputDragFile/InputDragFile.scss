@@ -1,0 +1,60 @@
+.input--file {
+    display: none;
+
+    &__zone {
+        border: 1px dashed var(--primary-gray);
+        border-radius: var(--border-radius);
+        height: 100%;
+        width: 100%;
+    }
+
+    &__placeholder {
+        padding: 3rem 2.5rem;
+    }
+
+    &__zone-over {
+        border: 1px solid var(--primary-gray);
+        background-color: var(--secondary-blue);
+    }
+
+    &__btn {
+        cursor: pointer;
+        color: var(--primary-orange);
+        text-decoration: underline;
+    }
+
+    &__uploaded {
+        display: flex;
+        align-items: center;
+        background-color: var(--primary-orange);
+    }
+
+    &__img {
+        height: 8rem;
+        margin-right: 3rem;
+    }
+
+    &__status {
+        font-weight: bold;
+    }
+
+    &__cancel-btn {
+        display: block;
+        clip-path: var(--icon-x);
+        align-self: center;
+        margin-left: auto;
+        height: 2rem;
+        width: 2rem;
+        border: none;
+        cursor: pointer;
+        transition: transform .2s linear;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}

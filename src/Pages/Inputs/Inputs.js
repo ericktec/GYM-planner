@@ -4,6 +4,7 @@ import InputSelect from '../../components/Inputs/InputSelect/InputSelect';
 import InputText from "../../components/Inputs/InputText/InputText";
 import InputRadioButton from '../../components/Inputs/InputRadioButton/InputRadioButton';
 import InputSelectMany from '../../components/Inputs/InputSelectMany/InputSelectMany';
+import InputDragFile from '../../components/Inputs/InputNumber/InputDragFile/InputDragFile';
 
 const Inputs = () => {
 
@@ -12,7 +13,7 @@ const Inputs = () => {
     const [inputSelect, setInputSelect] = useState("");
     const [inputRadioButton, setInputRadioButton] = useState("")
     const [inputSelectMany, setInputSelectMany] = useState([]);
-
+    const [inputFile, setInputFile] = useState();
     return (
         <div style={{ margin: "auto", width: "80%", marginTop: "1rem" }}>
             <InputText value={inputText} setValue={setInputText} id="test" label="Test label" placeholder="Test placeholder" />
@@ -29,6 +30,7 @@ const Inputs = () => {
                 <InputRadioButton value="test2" label="test2" id="test2" name="testGroup" selectedOption={inputRadioButton} setSelectedOption={setInputRadioButton} />
             </div>
             <InputSelectMany placeholder="Esto es el placeholder" label="Select many" id="selectmany" options={[{ value: "option1", label: "Option 1" }, { value: "option2", label: "Option 2" }]} optionsSelected={inputSelectMany} setOptionsSelected={setInputSelectMany} />
+            <InputDragFile id="Drag" label="Drag and drop" inputFile={inputFile} setInputFile={setInputFile} />
         </div>
     );
 }
