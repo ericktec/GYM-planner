@@ -1,0 +1,16 @@
+.workout-card {
+    &__container {
+        background-color: var(--secondary-blue);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        max-width: 600px;
+        margin: auto;
+    }
+
+    &__exercise-table {
+        font-size: 1.2rem;
+        display: grid;
+        row-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr) max-content;
+    }
+}

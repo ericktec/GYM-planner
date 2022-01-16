@@ -2,10 +2,10 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import "./NavBar.scss";
 import Profile from './Profile/Profile';
 
-const NavBar = () => {
+const NavBar = ({ className }) => {
 
     return (
-        <div className="navbar__container">
+        <div className={"navbar__container " + className}>
             <HamburgerMenu>
                 <li>Todays workout</li>
                 <li>My workouts</li>
