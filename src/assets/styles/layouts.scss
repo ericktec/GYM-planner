@@ -1,0 +1,20 @@
+@import "../styles/mediaQueries.scss";
+
+.form {
+    &__layout>div:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__message {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    @include for-size(tablet-landscape-up) {
+        &__layout {
+            overflow-y: auto;
+            max-height: 80vh;
+            padding: 0 2rem;
+        }
+    }
+}

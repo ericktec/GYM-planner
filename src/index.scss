@@ -4,6 +4,8 @@
     --primary-orange: #FE6851;
     --primary-gray: #E5E5E5;
 
+    --link-color: #0645AD;
+
     --border-radius: 5px;
 
     --icon-x: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
@@ -35,4 +37,26 @@ body {
     line-height: 1.6;
     background-color: var(--primary-blue);
     font-size: 2rem;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: 1rem;
+    scrollbar-color: var(--primary-gray) var(--secondary-blue);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--secondary-blue);
+    border-radius: 2rem;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary-gray);
+    border-radius: 2rem;
+
 }

@@ -1,0 +1,25 @@
+.profile {
+    &__container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__welcome {
+        text-align: right;
+
+        &-text {
+            font-weight: bold;
+        }
+    }
+
+    &__username {
+        font-size: 1.6rem;
+    }
+
+    &__img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+    }
+}

@@ -1,3 +1,10 @@
 @use "./assets/styles/utilities.scss";
 @use "./assets/styles/inputs.scss";
 @use "./assets/styles/buttons.scss";
+@use "./assets/styles/layouts.scss";
+@use "./assets/styles/links.scss";
+
+.app__container {
+    width: 90%;
+    margin: 2rem auto 0 auto;
+}

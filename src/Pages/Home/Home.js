@@ -20,10 +20,10 @@ const Home = () => {
             </div>
 
             <div className='btn__container small-margin-top'>
-                <a className="btn btn--primary">
+                <a className="btn btn--primary btn--big" href='#'>
                     Log in
                 </a>
-                <a className="btn btn--secondary">
+                <a className="btn btn--secondary btn--big" href='#'>
                     Sign up
                 </a>
             </div>

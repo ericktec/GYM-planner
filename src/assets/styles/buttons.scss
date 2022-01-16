@@ -1,11 +1,10 @@
 .btn {
     display: inline-block;
     border-radius: 5px;
-    padding: 2rem;
-    width: 23rem;
     color: inherit;
     font-size: inherit;
     text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -36,5 +35,31 @@
     &--secondary {
         background-color: transparent;
         border: 1px solid var(--primary-orange);
+    }
+
+    &--big {
+        padding: 2rem;
+        width: 23rem;
+    }
+
+    &--large {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+    }
+}
+
+.btn-back {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(46, 44, 58, 0.6);
+    border-radius: var(--border-radius);
+    fill: var(--primary-gray);
+    cursor: pointer;
+    transition: transform .2s ease-in, fill .1s linear;
+
+    &:hover {
+        transform: scale(1.2);
+        fill: var(--primary-orange);
     }
 }

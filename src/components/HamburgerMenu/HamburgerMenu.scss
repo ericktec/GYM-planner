@@ -1,0 +1,97 @@
+@import "../../assets/styles/mediaQueries.scss";
+
+.hamburger {
+    &__btn {
+        width: 3.5rem;
+        height: 3.5rem;
+        border: 1px solid var(--primary-gray);
+        position: relative;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        z-index: 1001;
+
+        &__icon {
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            &,
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                height: 2px;
+                width: 2rem;
+                background-color: var(--primary-gray);
+                transition: all .5s linear;
+            }
+
+            &::before {
+                top: -300%;
+                transform: translate(-50%, 0);
+            }
+
+            &::after {
+                top: 300%;
+                transform: translate(-50%, 0);
+            }
+
+            &--active {
+                background: transparent;
+
+                &::before,
+                &::after {
+                    top: 50%;
+
+                }
+
+                &::before {
+                    transform: translate(-50%, -50%) rotateZ(45deg);
+                }
+
+                &::after {
+                    transform: translate(-50%, -50%) rotateZ(-45deg);
+                }
+            }
+
+        }
+    }
+
+    &__menu {
+        margin-top: 7.8rem;
+
+        &>li {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+        }
+
+        &__container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: var(--secondary-blue);
+            width: 50vw;
+            font-size: 1.8rem;
+            height: 100vh;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform .5s ease-in-out;
+
+            @include for-size(tablet-portrait-up) {
+                width: 25rem;
+            }
+
+            &--active {
+                z-index: 1000;
+                opacity: 1;
+                transform: scaleX(1);
+
+                &>ul>li:hover {
+                    background-color: var(--primary-orange);
+                }
+            }
+        }
+
+
+    }
+}

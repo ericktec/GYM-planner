@@ -1,0 +1,43 @@
+@import "./../../assets/styles/mediaQueries.scss";
+
+.login {
+    &__container {
+        position: relative;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__back-btn {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    @include for-size(tablet-landscape-up) {
+        &__container {
+            position: absolute;
+            width: 80%;
+            display: flex;
+            column-gap: 2rem;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid var(--primary-gray);
+            padding: 2rem;
+        }
+
+        &__image {
+            height: auto;
+            flex: 1 0 50%;
+        }
+
+        &__back-btn {
+            top: 3rem;
+            left: 3rem;
+        }
+    }
+}
