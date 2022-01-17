@@ -1,0 +1,15 @@
+@import "../../assets/styles/mediaQueries.scss";
+
+.exercise-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include for-size(desktop-up) {
+        & {
+            margin: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

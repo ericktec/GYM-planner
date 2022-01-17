@@ -1,0 +1,47 @@
+@import "../../assets/styles/mediaQueries.scss";
+
+.exercise-card {
+    background-color: var(--secondary-blue);
+    display: flex;
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    position: relative;
+
+    @include for-size(desktop-up) {
+        & {
+            max-width: 60rem;
+            flex: 0 0 calc(100%/3);
+        }
+    }
+
+    &__img {
+        width: 8rem;
+    }
+
+    &__description {
+        margin-left: 2rem;
+    }
+
+    &__edit,
+    &__status {
+        position: absolute;
+        right: 1rem;
+    }
+
+    &__edit {
+        top: 1rem;
+    }
+
+    &__status {
+        font-weight: bold;
+        bottom: 1rem;
+    }
+
+    &__status-incomplete {
+        color: #FF0000;
+    }
+
+    &__status-complete {
+        color: #00FF19;
+    }
+}

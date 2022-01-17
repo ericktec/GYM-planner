@@ -58,7 +58,7 @@
     }
 
     &__menu {
-        margin-top: 7.8rem;
+        margin-top: 11rem;
 
         &>li {
             padding: 1rem 1.5rem;
@@ -67,6 +67,7 @@
 
         &__container {
             position: fixed;
+            z-index: 1000;
             top: 0;
             left: 0;
             background-color: var(--secondary-blue);
@@ -82,7 +83,6 @@
             }
 
             &--active {
-                z-index: 1000;
                 opacity: 1;
                 transform: scaleX(1);
 

@@ -3,6 +3,7 @@ import rectangle2 from "./Rectangle 12.svg";
 import people from "./Academia Png 1.svg";
 
 import "./Home.scss";
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -20,12 +21,13 @@ const Home = () => {
             </div>
 
             <div className='btn__container small-margin-top'>
-                <a className="btn btn--primary btn--big" href='#'>
+
+                <Link className="btn btn--primary btn--big" to='#'>
                     Log in
-                </a>
-                <a className="btn btn--secondary btn--big" href='#'>
+                </Link>
+                <Link className="btn btn--secondary btn--big" to="/todays-workout">
                     Sign up
-                </a>
+                </Link>
             </div>
 
         </div>

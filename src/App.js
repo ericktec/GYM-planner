@@ -8,25 +8,21 @@ import LogIn from './Pages/LogIn/LogIn';
 import SignUp from './Pages/SignUp/SignUp';
 import Test from './Pages/Test/Test';
 import TodaysWorkout from './Pages/TodaysWorkout/TodaysWorkout';
-import NavBar from './components/NavBar/NavBar';
+import ExerciseList from './Pages/ExerciseList/ExerciseList';
 
 function App() {
   return (
     <div>
-
       <Routes>
-        {/* Routes without navbar */}
         <Route path="/" element={<Home />} />
         <Route path="/inputs" element={<Inputs></Inputs>} />
         <Route path="/timer" element={<Timer />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
-      </Routes>
-      <NavBar className="width-90 margin-auto" />
-      <Routes>
-        {/* Routes with navbar */}
+
         <Route path="/test" element={<Test />} />
         <Route path="/todays-workout" element={<TodaysWorkout />} />
+        <Route path="/workout/exercise-list" element={<ExerciseList />} />
       </Routes>
     </div>
   );

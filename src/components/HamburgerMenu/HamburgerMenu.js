@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Backdrop from '../Backdrop/Backdrop';
 
@@ -11,17 +11,32 @@ const HamburgerMenu = ({ children }) => {
         offset: 0
     });
 
+    useEffect(() => {
+        document.addEventListener('click', handlerClickOutside);
+        return () => {
+            document.removeEventListener('click', handlerClickOutside);
+        }
+    }, [])
+
+
+    const handlerClickOutside = (e) => {
+        if (e.target.className === "backdrop") setIsActive(false);
+    }
+
     const onClickHamburgerButtonHandler = () => {
         const offset = window.scrollY;
+        const body = document.body
+
         setIsActive(state => {
             const prevState = { ...state };
             prevState.status = !prevState.status;
             if (prevState.status) {
                 prevState.offset = offset;
-                document.body.setAttribute("style", `position: fixed; top: -${prevState.offset}px; left:0; right:0; padding-right: 1rem`);
+                body.setAttribute("style", `position: fixed; top: -${prevState.offset}px; left:0; right:0; ${body.scrollHeight > document.documentElement.clientHeight ? "padding-right: 1rem;" : ""}`);
+                console.log(body.scrollHeight, document.documentElement.clientHeight)
             }
             else {
-                document.body.setAttribute("style", "")
+                body.setAttribute("style", "")
                 window.scrollTo(0, prevState.offset);
             }
             return prevState;
