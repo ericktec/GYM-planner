@@ -22,10 +22,10 @@ const Home = () => {
 
             <div className='btn__container small-margin-top'>
 
-                <Link className="btn btn--primary btn--big" to='#'>
+                <Link className="btn btn--primary btn--big" to='/login'>
                     Log in
                 </Link>
-                <Link className="btn btn--secondary btn--big" to="/todays-workout">
+                <Link className="btn btn--secondary btn--big" to="/signup">
                     Sign up
                 </Link>
             </div>

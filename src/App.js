@@ -9,6 +9,7 @@ import SignUp from './Pages/SignUp/SignUp';
 import Test from './Pages/Test/Test';
 import TodaysWorkout from './Pages/TodaysWorkout/TodaysWorkout';
 import ExerciseList from './Pages/ExerciseList/ExerciseList';
+import Exercise from './Pages/Exercise/Exercise';
 
 function App() {
   return (
@@ -16,13 +17,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/inputs" element={<Inputs></Inputs>} />
-        <Route path="/timer" element={<Timer />} />
+        <Route path="/timer" element={<Timer time={10} />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SignUp />} />
 
         <Route path="/test" element={<Test />} />
         <Route path="/todays-workout" element={<TodaysWorkout />} />
         <Route path="/workout/exercise-list" element={<ExerciseList />} />
+        <Route path="/workout/exercise-list/exercise" element={<Exercise />} />
       </Routes>
     </div>
   );

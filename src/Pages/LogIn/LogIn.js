@@ -4,6 +4,7 @@ import "./LogIn.scss";
 
 import logInPhoto from "./LogInPhoto.png";
 import { ReactComponent as BackIcon } from "./../../assets/images/backIcon.svg";
+import { Link } from 'react-router-dom';
 
 const LogIn = () => {
 
@@ -19,7 +20,7 @@ const LogIn = () => {
                     <InputText id="email" label="Email" name="email" placeholder="Introduce your email" value={email} setValue={setEmail} />
                     <InputText id="password" label="Password" name="password" placeholder="Introduce your password" value={password} setValue={setPassword} ofType="password" />
                     <div>
-                        <button className="btn btn--primary btn--large">Log in</button>
+                        <Link className="btn btn--primary btn--large" to="/todays-workout">Log in</Link>
                         <p className="form__message">Don't have an account? <a className="link">Sign-up</a></p>
                     </div>
                 </form>

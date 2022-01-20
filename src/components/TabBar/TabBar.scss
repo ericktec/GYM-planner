@@ -1,0 +1,19 @@
+.tab-bar {
+    &__tabs {
+        display: flex;
+    }
+
+    &__button {
+        font-size: inherit;
+        color: inherit;
+        border: none;
+        border: 1px solid var(--secondary-blue);
+        background-color: transparent;
+        cursor: pointer;
+        padding: 1rem 1.5rem;
+
+        &--active {
+            background-color: var(--primary-orange);
+        }
+    }
+}

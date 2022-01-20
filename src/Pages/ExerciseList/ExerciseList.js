@@ -17,10 +17,10 @@ const ExerciseList = () => {
             </div>
             <div className='btn__container small-margin-top'>
 
-                <Link className="btn btn--primary btn--big" to='#'>
+                <Link className="btn btn--primary btn--big" to='/workout/exercise-list/exercise'>
                     Start workout
                 </Link>
-                <Link className="btn btn--secondary btn--big" to="#">
+                <Link className="btn btn--secondary btn--big" to="/todays-workout">
                     Complete workout
                 </Link>
             </div>
