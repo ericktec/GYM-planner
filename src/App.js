@@ -10,6 +10,7 @@ import Test from './Pages/Test/Test';
 import TodaysWorkout from './Pages/TodaysWorkout/TodaysWorkout';
 import ExerciseList from './Pages/ExerciseList/ExerciseList';
 import Exercise from './Pages/Exercise/Exercise';
+import EditWorkout from './Pages/EditWorkout/EditWorkout';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/todays-workout" element={<TodaysWorkout />} />
         <Route path="/workout/exercise-list" element={<ExerciseList />} />
         <Route path="/workout/exercise-list/exercise" element={<Exercise />} />
+        <Route path='/editworkout' element={<EditWorkout />} />
       </Routes>
     </div>
   );

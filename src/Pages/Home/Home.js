@@ -21,7 +21,6 @@ const Home = () => {
             </div>
 
             <div className='btn__container small-margin-top'>
-
                 <Link className="btn btn--primary btn--big" to='/login'>
                     Log in
                 </Link>
@@ -29,7 +28,6 @@ const Home = () => {
                     Sign up
                 </Link>
             </div>
-
         </div>
     )
 }

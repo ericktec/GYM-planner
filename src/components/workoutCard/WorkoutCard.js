@@ -19,7 +19,6 @@ const WorkoutCard = ({ workoutData }) => {
                         <p className="text-align-center">{exercise.weight} lbs</p>
                     </React.Fragment>)}
             </div>
-
         </div>
     )
 }

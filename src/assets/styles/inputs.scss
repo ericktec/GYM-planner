@@ -35,6 +35,15 @@ select {
     display: block;
 }
 
+.input__group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &>* {
+        flex: 0 0 50%;
+    }
+}
 
 input[type=radio] {
     display: none;

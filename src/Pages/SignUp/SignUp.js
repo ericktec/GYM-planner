@@ -25,7 +25,7 @@ const SignUp = () => {
             <SignUpPhoto className="btn-back signup__back-btn" />
             <img className="signup__image" src={signUpImage} />
             <div className="app__container">
-                <form action="#" className="form__layout">
+                <form action="#" className="form__layout form-horizontal">
                     <InputText id="name" label="Name" name="name" placeholder="Introduce your name(s)" value={name} setValue={setName} />
                     <InputText id="lastName" label="Last name" name="lastName" placeholder="Introduce your last name" value={lastName} setValue={setLastName} />
                     <InputText id="email" label="Email" name="email" placeholder="Introduce your email" value={email} setValue={setEmail} ofType="email" />

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Timers.scss";
+import timerTone from "./timer.mp3";
 
 const Timer = ({ time }) => {
     const [timeRemaining, setTimeRemaining] = useState(time);
@@ -19,6 +20,8 @@ const Timer = ({ time }) => {
     });
 
     if (timeRemaining < 0) {
+        const audio = new Audio(timerTone);
+        audio.play();
         navigate("/workout/exercise-list/exercise");
     }
 

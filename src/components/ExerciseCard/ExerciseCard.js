@@ -1,5 +1,6 @@
 import "./ExerciseCard.scss";
-import { ReactComponent as EditIcon } from "./EditIcon.svg";
+import { ReactComponent as EditIcon } from "../../assets/images/EditIcon.svg";
+import { Link } from 'react-router-dom';
 
 const ExerciseCard = ({ name, sets, setsCompleted, setSetsCompleted }) => {
 
@@ -10,7 +11,9 @@ const ExerciseCard = ({ name, sets, setsCompleted, setSetsCompleted }) => {
                 <p>{name}</p>
                 <p>Sets {setsCompleted}/{sets}</p>
             </div>
-            <EditIcon className="exercise-card__edit" />
+            <Link to={"/editWorkout"}>
+                <EditIcon className="exercise-card__edit" />
+            </Link>
             {setsCompleted < sets ? <p className="exercise-card__status exercise-card__status-incomplete">Incomplete</p> :
                 <p className="exercise-card__status exercise-card__status-complete">Complete</p>
             }
