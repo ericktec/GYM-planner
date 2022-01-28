@@ -14,7 +14,7 @@ const InputText = ({ id, name, label, placeholder, value, setValue, ofType }) =>
     return (
         <div className="input--text__container">
             <label className="input__label" htmlFor={id}>{label}</label>
-            <input name={name} id={id} onChange={onChangeHandler} value={value} type={type} placeholder={placeholder} />
+            <input name={name} id={id} onChange={onChangeHandler} value={value} type={type} placeholder={placeholder} autoComplete="no" />
         </div>
     );
 }

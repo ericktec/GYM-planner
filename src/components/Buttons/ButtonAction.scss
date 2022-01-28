@@ -1,7 +1,19 @@
 .action--btn {
-    border: 1px solid var(--primary-gray);
-    border-radius: 50%;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 3rem;
+    width: 3rem;
+
+    &::before {
+        display: block;
+        text-align: center;
+        border: 1px solid var(--primary-gray);
+        border-radius: 50%;
+        font-size: 2rem;
+    }
 
     &:hover {
         color: var(--primary-orange);
@@ -14,8 +26,8 @@
     }
 
     &__container {
-        display: flex;
-        align-items: center;
+        position: relative;
+        padding-left: 3rem;
     }
 
     &__label {

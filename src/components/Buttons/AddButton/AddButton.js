@@ -1,11 +1,17 @@
 import "./../ButtonAction.scss";
 import "./AddButton.scss";
 
-const AddButton = ({ label, inputArray, setInputArray }) => {
+const AddButton = ({ label, inputArray, setInputArray, newValue }) => {
+
+    const onClickHandler = () => {
+        setInputArray(prev => {
+            return [...prev, newValue]
+        });
+    }
 
     return (
-        <div className="action--btn__container">
-            <span className="action--btn add--btn">+</span>
+        <div onClick={onClickHandler} className="action--btn__container">
+            <span className="action--btn add--btn"></span>
             <label className="action--btn__label">{label}</label>
         </div>
     );

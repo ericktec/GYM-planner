@@ -1,4 +1,6 @@
 .add--btn {
-    font-size: 2rem;
-    padding: 0px 1rem;
+    &::before {
+        content: "+";
+    }
+
 }

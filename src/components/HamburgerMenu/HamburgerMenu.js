@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Backdrop from '../Backdrop/Backdrop';
 
@@ -32,7 +32,6 @@ const HamburgerMenu = ({ children }) => {
         const scrollWidth = window.innerWidth - document.documentElement.offsetWidth;
 
         setIsActive(state => {
-            console.log(scrollWidth)
             const prevState = { ...state };
             prevState.status = !prevState.status;
             if (prevState.status) {
