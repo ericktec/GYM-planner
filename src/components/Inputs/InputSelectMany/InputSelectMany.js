@@ -15,6 +15,7 @@ const InputSelectMany = ({ optionsSelected, setOptionsSelected, options, label, 
 
     const dropdownHandler = event => {
         if (!dropdown.current) return;
+        console.log(dropdown.current)
         if (dropdown.current.contains(event.target) && !event?.target.closest(".input--select-many__badge")) return setDropDownActive(prev => !prev);
         setDropDownActive(false);
     };
